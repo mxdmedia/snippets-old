@@ -21,6 +21,7 @@ class Common(Configuration):
         'rest_framework',            # utilities for rest apis
         'rest_framework.authtoken',  # token authentication
         'django_filters',            # for filtering rest endpoints
+        'corsheaders',
 
         # Your apps
         'snippetsapi.users',
@@ -51,11 +52,16 @@ class Common(Configuration):
     )
 
     # Postgres
+    # Postgres
     DATABASES = {
-        'default': dj_database_url.config(
-            default='postgres://postgres:@postgres:5432/postgres',
-            conn_max_age=int(os.getenv('POSTGRES_CONN_MAX_AGE', 600))
-        )
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': os.getenv('DJANGO_DB'),
+            'USER': os.getenv('DJANGO_DB_USER'),
+            'PASSWORD': os.getenv('DJANGO_DB_PASSWORD'),
+            'HOST': os.getenv('DJANGO_DB_URL'),
+            'PORT': '',
+        }
     }
 
     # General
