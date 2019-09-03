@@ -14,7 +14,7 @@ services:
       - '../nginx/conf.d:/etc/nginx/conf.d/:rw'
       - '../nginx/certs:/etc/nginx/certs:ro'
       - '../nginx/html:/usr/share/nginx/html'
-      - api_static_files:/var/static/api
+      - api_static_files:/var/static/api/static
 
   letsencrypt:
     restart: always
