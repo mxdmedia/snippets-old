@@ -1,0 +1,8 @@
+POSTGRES_PW=TheRootPostgresPassword
+
+API_DB_NAME=snippet
+API_DB_USER=snippet
+API_DB_PASSWORD=SnippetAPIDatabasePassword
+API_DB_HOST=snippets-db
+
+DJANGO_SECRET=AStringOfCharactersThatIsThedjangoSecret

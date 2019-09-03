@@ -1,0 +1,68 @@
+version: '3'
+
+services:
+  nginx-proxy:
+    image: jwilder/nginx-proxy:alpine
+    container_name: nginx-proxy
+    restart: always
+    ports:
+      - '80:80'
+      - '443:443'
+    volumes:
+      - '/var/run/docker.sock:/tmp/docker.sock:ro'
+      - '../nginx/vhost.d:/etc/nginx/vhost.d'
+      - '../nginx/conf.d:/etc/nginx/conf.d/:rw'
+      - '../nginx/certs:/etc/nginx/certs:ro'
+
+  letsencrypt:
+    restart: always
+    image: jrcs/letsencrypt-nginx-proxy-companion
+    depends_on:
+      - 'nginx-proxy'
+    volumes_from:
+      - 'nginx-proxy'
+    volumes:
+      - '/var/run/docker.sock:/var/run/docker.sock:ro'
+      - './nginx/certs:/etc/nginx/certs:rw'
+    environment:
+      - NGINX_PROXY_CONTAINER=nginx-proxy
+
+  snippets-db:
+    restart: always
+    image: postgres:10.5
+    volumes:
+      - snippets_db_data:/var/lib/postgresql/data/
+      - ../db/scripts/init-user-db.sh:/docker-entrypoint-initdb.d/init-user-db.sh
+      - ../db/scripts:/scripts:cached
+    environment:
+      - POSTGRES_PASSWORD=${POSTGRES_PW}
+      - API_DB_NAME=${API_DB_NAME}
+      - API_DB_USER=${API_DB_USER}
+      - API_DB_PW=${API_DB_PASSWORD}
+
+  snippets-api:
+    restart: always
+    depends_on:
+      - snippets-db
+    build: ../snippets-api
+    environment:
+      - VIRTUAL_HOST=snippets-api.dobossy.net
+      - SSL_POLICY=AWS-TLS-1-1-2017-01
+      - LETSENCRYPT_HOST=snippets-api.dobossy.net
+      - DJANGO_SECRET_KEY=${DJANGO_SECRET_KEY}
+      - DJANGO_CONFIGURATION=Local
+      - DJANGO_DB=${API_DB_NAME}
+      - DJANGO_DB_USER=${API_DB_USER}
+      - DJANGO_DB_PASSWORD=${API_DB_PASSWORD}
+      - DJANGO_DB_URL=${API_DB_HOST}
+
+  snippets-client:
+    restart: always
+    build: ../snippets-client
+    environment:
+      - VIRTUAL_HOST=snippets.dobossy.net
+      - SSL_POLICY=AWS-TLS-1-1-2017-01
+      - LETSENCRYPT_HOST=snippets.dobossy.net
+
+volumes:
+  snippets_db_data:
