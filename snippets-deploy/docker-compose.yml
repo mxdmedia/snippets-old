@@ -19,11 +19,10 @@ services:
     image: jrcs/letsencrypt-nginx-proxy-companion
     depends_on:
       - 'nginx-proxy'
-    volumes_from:
-      - 'nginx-proxy'
     volumes:
       - '/var/run/docker.sock:/var/run/docker.sock:ro'
-      - './nginx/certs:/etc/nginx/certs:rw'
+      - '../nginx/vhost.d:/etc/nginx/vhost.d'
+      - '../nginx/certs:/etc/nginx/certs:rw'
     environment:
       - NGINX_PROXY_CONTAINER=nginx-proxy
 
