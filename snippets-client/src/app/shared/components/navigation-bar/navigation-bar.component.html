@@ -1,0 +1,24 @@
+<nav>
+  <span class="logo">Snippets</span>
+  <button
+    mat-button
+    *ngIf="!(authState$ | async).authenticated"
+    (click)="login()"
+  >
+    <mat-icon>exit_to_app</mat-icon>
+    <span>Login</span>
+  </button>
+  <button
+    mat-button
+    *ngIf="(authState$ | async).authenticated"
+    [matMenuTriggerFor]="userMenu"
+  >
+    <mat-icon>account_circle</mat-icon> {{ (authState$ | async).username }}
+  </button>
+</nav>
+<mat-menu #userMenu="matMenu">
+  <button mat-menu-item (click)="logout()">
+    <mat-icon>logout</mat-icon>
+    <span>Logout</span>
+  </button>
+</mat-menu>

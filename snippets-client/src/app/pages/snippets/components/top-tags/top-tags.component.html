@@ -1,0 +1,17 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Top Tags</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-chip-list [multiple]="true" [selectable]="true">
+      <mat-chip
+        *ngFor="let selTag of selectedTags"
+        [selected]="selTag.selected"
+        (click)="tagClicked(selTag)"
+        [selectable]="true"
+      >
+        {{ selTag.tag.tag }} ({{ selTag.tag.count }})
+      </mat-chip>
+    </mat-chip-list>
+  </mat-card-content>
+</mat-card>

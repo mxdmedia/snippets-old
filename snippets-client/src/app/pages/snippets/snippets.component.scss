@@ -1,0 +1,42 @@
+:host {
+  .title {
+    width: 100%;
+    padding-left: 16px;
+    display: flex;
+    justify-content: space-between;
+    h2 {
+      margin: 16px 0px 0px 0px;
+      color: #555555;
+      display: block;
+    }
+    button {
+      margin-right: 16px;
+      margin-top: 10px;
+    }
+  }
+  .container {
+    display: flex;
+    section {
+      flex: 1;
+      padding-left: 15px;
+      margin-bottom: 20px;
+    }
+
+    aside {
+      width: 400px;
+      height: 100%;
+      padding: 15px;
+    }
+  }
+
+  .fully-loaded {
+    font-size: 20px;
+    text-align: center;
+    margin: 16px 0px;
+    color: #555555;
+  }
+
+  mat-progress-bar {
+    margin: 16px 0px;
+  }
+}

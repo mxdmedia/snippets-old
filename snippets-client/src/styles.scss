@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import '~@angular/material/theming';
+@import "~prismjs/plugins/toolbar/prism-toolbar.css";
+@import "~prismjs/themes/prism-okaidia";
+@import '~highlight.js/styles/atom-one-dark-reasonable.css';
+
+body {
+    margin: 0px;
+    font-family: Roboto,"Helvetica Neue",sans-serif;
+    * {
+        box-sizing: border-box;
+      }
+    background-color: #eeeeee;
+}
+

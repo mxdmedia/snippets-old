@@ -32,5 +32,4 @@ def pg_isready(host, user, password, dbname):
     logger.error(f"We could not connect to Postgres within {check_timeout} seconds.")
     return False
 
-
 pg_isready(**config)

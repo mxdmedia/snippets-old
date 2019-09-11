@@ -1,0 +1,12 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Top Languages</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-chip-list>
+      <mat-chip *ngFor="let language of langauges">
+        {{ language.name }} ({{ language.count }})
+      </mat-chip>
+    </mat-chip-list>
+  </mat-card-content>
+</mat-card>

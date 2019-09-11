@@ -1,0 +1,43 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title-group>
+      <mat-card-title>
+        {{ snippet.title }} - {{ languages[snippet.language]?.name }}
+      </mat-card-title>
+    </mat-card-title-group>
+    <div fxFlex></div>
+    <div class="button-group" *ngIf="user === snippet.author">
+      <button
+        mat-icon-button
+        [matMenuTriggerFor]="menu"
+        aria-label="Snippet Operations"
+        class="edit-button"
+      >
+        <mat-icon>more_vert</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="edit.emit(snippet)">
+          <mat-icon>edit</mat-icon>
+          <span>Edit Snippet</span>
+        </button>
+        <button mat-menu-item (click)="delete.emit(snippet)">
+          <mat-icon>delete</mat-icon>
+          <span>Delete Snippet</span>
+        </button>
+      </mat-menu>
+    </div>
+  </mat-card-header>
+  <mat-card-content>
+    <pre><code [highlight]="snippet.snippet" [ngClass]="languages[snippet.language]?.prismCode"></code></pre>
+    <mat-chip-list>
+      <mat-chip *ngFor="let tag of snippet.tags">{{ tag }}</mat-chip>
+    </mat-chip-list>
+  </mat-card-content>
+  <mat-card-footer>
+    <mat-card-subtitle>
+      <span *ngIf="user !== snippet.author">{{ snippet.authorUsername }}</span>
+      <span *ngIf="user === snippet.author">You</span>
+      on {{ snippet.created | date: 'longDate' }}
+    </mat-card-subtitle>
+  </mat-card-footer>
+</mat-card>

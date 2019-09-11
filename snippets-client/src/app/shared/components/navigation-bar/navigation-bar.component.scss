@@ -1,0 +1,20 @@
+nav {
+  display: flex;
+  height: 56px;
+  background-color: #383a3e;
+  color: #ffffff;
+  justify-content: space-between;
+  span.logo {
+    padding-left: 20px;
+    line-height: 56px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  button {
+    margin-right: 16px;
+  }
+
+  .login-icon {
+    transform: rotate(180deg);
+  }
+}

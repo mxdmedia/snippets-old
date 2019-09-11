@@ -1,0 +1,331 @@
+[
+{
+  "model": "snippets.snippetlanguage",
+  "pk": "35470135-520a-4e42-9111-dd0df824d191",
+  "fields": {
+    "name": "Haskell",
+    "prism_code": "haskell"
+  }
+},
+{
+  "model": "snippets.snippetlanguage",
+  "pk": "3788ee29-8f3d-4d28-9524-79c32c785ba3",
+  "fields": {
+    "name": "Ada",
+    "prism_code": "ada"
+  }
+},
+{
+  "model": "snippets.snippetlanguage",
+  "pk": "471fb38f-5f78-4c74-a134-43ba03695dbd",
+  "fields": {
+    "name": "X86 Assembly",
+    "prism_code": "x86asm"
+  }
+},
+{
+  "model": "snippets.snippetlanguage",
+  "pk": "54c586e5-e76d-4c4d-a050-cda306c42690",
+  "fields": {
+    "name": "CSS",
+    "prism_code": "css"
+  }
+},
+{
+  "model": "snippets.snippetlanguage",
+  "pk": "57956361-1fb1-40b0-a915-6f84614e2696",
+  "fields": {
+    "name": "HTML",
+    "prism_code": "markdown"
+  }
+},
+{
+  "model": "snippets.snippetlanguage",
+  "pk": "7bf7a99e-e25c-4c0a-a7c4-5fa656eb516b",
+  "fields": {
+    "name": "BASIC",
+    "prism_code": "basic"
+  }
+},
+{
+  "model": "snippets.snippetlanguage",
+  "pk": "7d76c60b-c172-4373-9014-4fd2bb686840",
+  "fields": {
+    "name": "Fortran",
+    "prism_code": "fortran"
+  }
+},
+{
+  "model": "snippets.snippetlanguage",
+  "pk": "82ade401-070a-4471-84e3-3d6a31cf6f48",
+  "fields": {
+    "name": "Python",
+    "prism_code": "python"
+  }
+},
+{
+  "model": "snippets.snippetlanguage",
+  "pk": "9dff12ce-5476-4b61-b529-25639571a5b9",
+  "fields": {
+    "name": "Lisp",
+    "prism_code": "lisp"
+  }
+},
+{
+  "model": "snippets.snippetlanguage",
+  "pk": "ae1ff5bf-cdb7-4a9b-807c-58f146f9cc47",
+  "fields": {
+    "name": "C++",
+    "prism_code": "cpp"
+  }
+},
+{
+  "model": "snippets.snippetlanguage",
+  "pk": "b9b78f2b-f866-48b7-9ffd-cd094565ff7d",
+  "fields": {
+    "name": "Typescript",
+    "prism_code": "typescript"
+  }
+},
+{
+  "model": "snippets.snippetlanguage",
+  "pk": "d86e6f55-dce7-4ceb-b8e7-274171f37f07",
+  "fields": {
+    "name": "SCSS",
+    "prism_code": "scss"
+  }
+},
+{
+  "model": "snippets.snippetlanguage",
+  "pk": "eadadfb4-5908-4fea-bb77-89dd77a56b26",
+  "fields": {
+    "name": "Javascript",
+    "prism_code": "javascript"
+  }
+},
+{
+  "model": "snippets.snippetlanguage",
+  "pk": "f932508c-aa7c-4ed1-8e7d-e189f6aa9299",
+  "fields": {
+    "name": "Smalltalk",
+    "prism_code": "smalltalk"
+  }
+},
+{
+  "model": "snippets.snippetlanguage",
+  "pk": "fc83248d-f05a-472d-9ced-cd47be951c95",
+  "fields": {
+    "name": "Bash",
+    "prism_code": "bash"
+  }
+},
+{
+  "model": "snippets.snippettag",
+  "pk": "hello-world",
+  "fields": {
+    "description": "A simple \"Hello World\" program",
+    "created": "2019-09-06T02:18:07.323Z"
+  }
+},
+{
+  "model": "snippets.snippettag",
+  "pk": "oh-god-why",
+  "fields": {
+    "description": "Terrible, terrible, code.",
+    "created": "2019-09-06T02:19:07.851Z"
+  }
+},
+{
+  "model": "snippets.snippettag",
+  "pk": "python-3-main",
+  "fields": {
+    "description": null,
+    "created": "2019-09-08T20:12:09.054Z"
+  }
+},
+{
+  "model": "snippets.snippettag",
+  "pk": "simple",
+  "fields": {
+    "description": "A simple program",
+    "created": "2019-09-06T02:18:15.376Z"
+  }
+},
+{
+  "model": "snippets.snippettag",
+  "pk": "starter",
+  "fields": {
+    "description": "Some starter code for.. getting started.",
+    "created": "2019-09-06T02:18:24.973Z"
+  }
+},
+{
+  "model": "snippets.snippettag",
+  "pk": "very-basic",
+  "fields": {
+    "description": null,
+    "created": "2019-09-08T23:36:13.837Z"
+  }
+},
+{
+  "model": "users.user",
+  "pk": "78bd8400-c415-4faf-8e96-27f2b85b8abe",
+  "fields": {
+    "password": "pbkdf2_sha256$150000$xnWoLfN5zGCP$jMSpMVDjTm+jISmOD7h62hHMC3i7rY3BSpmlxx7Q29w=",
+    "last_login": "2019-09-06T02:17:24Z",
+    "is_superuser": true,
+    "username": "mark",
+    "first_name": "Mark",
+    "last_name": "Dobossy",
+    "email": "mark@dobossy.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2019-09-06T02:16:38Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "snippets.snippet",
+  "pk": "111bdccb-1607-40a4-83e7-c2be9624bee8",
+  "fields": {
+    "title": "Hello, World",
+    "snippet": "10 PRINT \"Hello World!\"\n20 END",
+    "language": "7bf7a99e-e25c-4c0a-a7c4-5fa656eb516b",
+    "author": "78bd8400-c415-4faf-8e96-27f2b85b8abe",
+    "created": "2019-09-06T02:45:07.137Z",
+    "updated": "2019-09-09T00:04:44.915Z",
+    "tags": [
+      "hello-world",
+      "simple"
+    ]
+  }
+},
+{
+  "model": "snippets.snippet",
+  "pk": "138f60eb-a232-4207-b45f-f83f5c166067",
+  "fields": {
+    "title": "Whats This Function?",
+    "snippet": "// What This Function do?!?!\nvar wtf = function(_) {\n    for (_ = [+[], ++[\n            []\n        ][+[]], +[], _], _[++[++[++[\n            []\n        ][+[]]][+[]]][+[]]] = (((_[++[++[++[\n            []\n        ][+[]]][+[]]][+[]]] - (++[\n            []\n        ][+[]])) & (((--[\n            []\n        ][+[]]) >>> (++[\n            []\n        ][+[]])))) === (_[++[++[++[\n            []\n        ][+[]]][+[]]][+[]]] - (++[\n            []\n        ][+[]]))) ? (_[++[++[\n            []\n        ][+[]]][+[]]] = ++[\n            []\n        ][+[]], _[++[++[++[\n            []\n        ][+[]]][+[]]][+[]]] - (++[\n            []\n        ][+[]])) : +[]; _[++[++[++[\n            []\n        ][+[]]][+[]]][+[]]]--; _[+[]] = (_[++[\n            []\n        ][+[]]] = _[++[++[\n            []\n        ][+[]]][+[]]] = _[+[]] + _[++[\n            []\n        ][+[]]]) - _[+[]]);\n    return _[++[++[\n        []\n    ][+[]]][+[]]];\n}",
+    "language": "eadadfb4-5908-4fea-bb77-89dd77a56b26",
+    "author": "78bd8400-c415-4faf-8e96-27f2b85b8abe",
+    "created": "2019-09-09T22:21:38.590Z",
+    "updated": "2019-09-09T22:31:56.605Z",
+    "tags": [
+      "oh-god-why"
+    ]
+  }
+},
+{
+  "model": "snippets.snippet",
+  "pk": "2b74adc5-4d15-432b-84ca-57549f888398",
+  "fields": {
+    "title": "Trapezoid Rule",
+    "snippet": "pure function integrate(x, y) result(r)\r\n    !! Calculates the integral of an array y with respect to x using the trapezoid\r\n    !! approximation. Note that the mesh spacing of x does not have to be uniform.\r\n    real(wp), intent(in)  :: x(:)         !! Variable x\r\n    real(wp), intent(in)  :: y(size(x))   !! Function y(x)\r\n    real(wp)              :: r            !! Integral \u222by(x)\u00b7dx\r\n\r\n    ! Integrate using the trapezoidal rule\r\n    associate(n => size(x))\r\n      r = sum((y(1+1:n-0) + y(1+0:n-1))*(x(1+1:n-0) - x(1+0:n-1)))/2\r\n    end associate\r\n  end function",
+    "language": "7d76c60b-c172-4373-9014-4fd2bb686840",
+    "author": "78bd8400-c415-4faf-8e96-27f2b85b8abe",
+    "created": "2019-09-06T02:46:18.556Z",
+    "updated": "2019-09-06T02:46:18.556Z",
+    "tags": [
+      "simple"
+    ]
+  }
+},
+{
+  "model": "snippets.snippet",
+  "pk": "7edd8d0f-4e2f-4975-b9a9-9c421f63b944",
+  "fields": {
+    "title": "Fast inverse square root.",
+    "snippet": "float Q_rsqrt( float number )\r\n{\r\n\tlong i;\r\n\tfloat x2, y;\r\n\tconst float threehalfs = 1.5F;\r\n\r\n\tx2 = number * 0.5F;\r\n\ty  = number;\r\n\ti  = * ( long * ) &y;                       // evil floating point bit level hacking\r\n\ti  = 0x5f3759df - ( i >> 1 );               // what the @%$#^? \r\n\ty  = * ( float * ) &i;\r\n\ty  = y * ( threehalfs - ( x2 * y * y ) );   // 1st iteration\r\n//\ty  = y * ( threehalfs - ( x2 * y * y ) );   // 2nd iteration, this can be removed\r\n\r\n\treturn y;\r\n}",
+    "language": "ae1ff5bf-cdb7-4a9b-807c-58f146f9cc47",
+    "author": "78bd8400-c415-4faf-8e96-27f2b85b8abe",
+    "created": "2019-09-06T02:43:41.641Z",
+    "updated": "2019-09-06T02:43:41.641Z",
+    "tags": [
+      "simple",
+      "oh-god-why"
+    ]
+  }
+},
+{
+  "model": "snippets.snippet",
+  "pk": "966debf1-09da-4eb6-abbd-057d249384e4",
+  "fields": {
+    "title": "Hello, World",
+    "snippet": "print(\"Hello World\")",
+    "language": "82ade401-070a-4471-84e3-3d6a31cf6f48",
+    "author": "78bd8400-c415-4faf-8e96-27f2b85b8abe",
+    "created": "2019-09-09T00:37:26.521Z",
+    "updated": "2019-09-09T03:11:09.689Z",
+    "tags": [
+      "hello-world",
+      "simple"
+    ]
+  }
+},
+{
+  "model": "snippets.snippet",
+  "pk": "9b90e051-b451-4d53-8ec7-c7b933eb4419",
+  "fields": {
+    "title": "Hello World",
+    "snippet": "with Text_IO; use Text_IO;\r\nprocedure hello is\r\nbegin\r\n   Put_Line(\"Hello world!\");\r\nend hello;",
+    "language": "3788ee29-8f3d-4d28-9524-79c32c785ba3",
+    "author": "78bd8400-c415-4faf-8e96-27f2b85b8abe",
+    "created": "2019-09-06T02:25:00.716Z",
+    "updated": "2019-09-06T02:25:00.716Z",
+    "tags": [
+      "hello-world",
+      "simple"
+    ]
+  }
+},
+{
+  "model": "snippets.snippet",
+  "pk": "a788aa11-048a-4909-bd08-5213ee8d19b6",
+  "fields": {
+    "title": "Void Type Expressions",
+    "snippet": "void f() { }\r\nvoid g() { return f(); }\r\nvoid h(void(*k)()) {\r\n    return k();\r\n}\r\n\r\nint main() {\r\n    h(g);\r\n    return 0;\r\n}",
+    "language": "ae1ff5bf-cdb7-4a9b-807c-58f146f9cc47",
+    "author": "78bd8400-c415-4faf-8e96-27f2b85b8abe",
+    "created": "2019-09-06T02:40:33.997Z",
+    "updated": "2019-09-06T02:40:33.997Z",
+    "tags": [
+      "oh-god-why"
+    ]
+  }
+},
+{
+  "model": "snippets.snippet",
+  "pk": "bd8d36db-d500-4868-a28f-ca687f8e4d45",
+  "fields": {
+    "title": "Hello World",
+    "snippet": "; ----------------------------------------------------------------------------------------\r\n; Writes \"Hello, World\" to the console using only system calls. Runs on 64-bit Linux only.\r\n; To assemble and run:\r\n;\r\n;     nasm -felf64 hello.asm && ld hello.o && ./a.out\r\n; ----------------------------------------------------------------------------------------\r\n\r\n          global    _start\r\n\r\n          section   .text\r\n_start:   mov       rax, 1                  ; system call for write\r\n          mov       rdi, 1                  ; file handle 1 is stdout\r\n          mov       rsi, message            ; address of string to output\r\n          mov       rdx, 13                 ; number of bytes\r\n          syscall                           ; invoke operating system to do the write\r\n          mov       rax, 60                 ; system call for exit\r\n          xor       rdi, rdi                ; exit code 0\r\n          syscall                           ; invoke operating system to exit\r\n\r\n          section   .data\r\nmessage:  db        \"Hello, World\", 10      ; note the newline at the end",
+    "language": "471fb38f-5f78-4c74-a134-43ba03695dbd",
+    "author": "78bd8400-c415-4faf-8e96-27f2b85b8abe",
+    "created": "2019-09-06T02:27:32.004Z",
+    "updated": "2019-09-06T02:27:32.004Z",
+    "tags": [
+      "hello-world",
+      "simple",
+      "starter"
+    ]
+  }
+},
+{
+  "model": "snippets.snippet",
+  "pk": "dcd05721-4814-48fd-9199-2f9b2b9a227e",
+  "fields": {
+    "title": "Hello World",
+    "snippet": "#include <iostream>\r\n\r\nint main()\r\n{\r\n    std::cout << \"Hello, world!\\n\";\r\n    return 0;\r\n}",
+    "language": "ae1ff5bf-cdb7-4a9b-807c-58f146f9cc47",
+    "author": "78bd8400-c415-4faf-8e96-27f2b85b8abe",
+    "created": "2019-09-06T02:26:01.201Z",
+    "updated": "2019-09-06T02:26:01.201Z",
+    "tags": [
+      "hello-world",
+      "simple",
+      "starter"
+    ]
+  }
+}
+]

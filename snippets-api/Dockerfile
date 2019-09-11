@@ -9,9 +9,12 @@ RUN pip install -r requirements.txt
 COPY . /code
 WORKDIR /code
 
+# Exposes port 8000
 EXPOSE 8000
 
 # Migrates the database, uploads staticfiles, and runs the production server
-CMD ./manage.py migrate && \
+CMD ./wait_for_postgres.py && \
+  sh load_data.sh && \
+  ./manage.py migrate && \
   ./manage.py collectstatic --noinput && \
   newrelic-admin run-program gunicorn --bind 0.0.0.0:8000 --access-logfile - snippetsapi.wsgi:application

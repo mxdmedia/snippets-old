@@ -1,0 +1,20 @@
+{
+    "python.linting.pylintEnabled": false,
+    "python.linting.flake8Enabled": true,
+    "python.linting.enabled": true,
+    "python.pythonPath": "/usr/local/bin/python",
+    "workbench.colorCustomizations": {
+        "activityBar.background": "#1e3f5c",
+        "activityBar.foreground": "#e7e7e7",
+        "activityBar.inactiveForeground": "#e7e7e799",
+        "activityBarBadge.background": "#ffdf76",
+        "activityBarBadge.foreground": "#1e3f5c",
+        "titleBar.activeBackground": "#ffdf76",
+        "titleBar.inactiveBackground": "#ffeba9",
+        "titleBar.activeForeground": "#1e3f5c",
+        "titleBar.inactiveForeground": "#1e3f5c",
+        "statusBar.background": "#112536",
+        "statusBarItem.hoverBackground": "#1d405d",
+        "statusBar.foreground": "#e7e7e7"
+    },
+}

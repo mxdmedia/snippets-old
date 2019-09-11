@@ -2,19 +2,16 @@ version: '3'
 
 services:
   snippets-db:
+    env_file: dev.env
     restart: always
     image: postgres:10.5
     volumes:
       - snippets_db_data:/var/lib/postgresql/data/
       - ../db/scripts/init-user-db.sh:/docker-entrypoint-initdb.d/init-user-db.sh
       - ../db/scripts:/scripts:cached
-    environment:
-      - POSTGRES_PASSWORD=PostgresPasswordWoot!
-      - API_DB_NAME=snippets
-      - API_DB_USER=snippets
-      - API_DB_PW=snippetsDatabasePassword
 
   snippets-api:
+    env_file: dev.env
     restart: always
     depends_on:
       - snippets-db
@@ -22,31 +19,12 @@ services:
     volumes:
       - ../snippets-api:/code:cached
     working_dir: /code
-    environment:
-      - DJANGO_SECRET_KEY=FWfkfk94fFRskd0fe0aw9gjf0930agjjisdfSDF42r42
-      - DJANGO_CONFIGURATION=Local
-      - DJANGO_DB=snippets
-      - DJANGO_DB_USER=snippets
-      - DJANGO_DB_PASSWORD=snippetsDatabasePassword
-      - DJANGO_DB_URL=snippets-db
     command: >
       bash -c "python wait_for_postgres.py &&
                ./manage.py migrate &&
                ./manage.py runserver 0.0.0.0:8000"
     ports:
       - '8000:8000'
-
-  # snippets-client:
-  #   restart: always
-  #   build: ../snippets-client
-  #   volumes:
-  #     - ../snippets-api:/code:cached
-  #   working_dir: /code
-  #   ports:
-  #     - '4200:4200'
-  #   command: >
-  #     bash -c "cd /workspaces/snippets-client &&
-  #              ng serve --host 0.0.0.0"
 
 volumes:
   snippets_db_data:

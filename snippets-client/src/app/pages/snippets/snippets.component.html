@@ -1,0 +1,45 @@
+<div class="title">
+  <h2>Recent Snippets</h2>
+  <button
+    *ngIf="snippetLanguages.allAlpha$ | async as langs"
+    mat-raised-button
+    color="primary"
+    (click)="createSnippet(langs)"
+  >
+    Create Snippet
+  </button>
+</div>
+<div class="container">
+  <section>
+    <app-snippet
+      *ngFor="let snippet of snippets.all$ | async"
+      [snippet]="snippet"
+      [languages]="snippetLanguages.entities$ | async"
+      [user]="userId"
+      (edit)="editSnippet(snippet)"
+      (delete)="snippets.delete(snippet)"
+    ></app-snippet>
+    <div
+      infiniteScroll
+      [infiniteScrollDistance]="2"
+      [infiniteScrollThrottle]="500"
+      (scrolled)="onScroll()"
+    ></div>
+    <mat-progress-bar
+      mode="indeterminate"
+      *ngIf="snippets.isLoading$ | async"
+    ></mat-progress-bar>
+    <div class="fully-loaded" *ngIf="fullyLoaded">
+      No more snippets available.
+    </div>
+  </section>
+  <aside>
+    <app-top-languages
+      [langauges]="snippetLanguages.byCount$ | async"
+    ></app-top-languages>
+    <app-top-tags
+      [tags]="snippetTags.all$ | async"
+      (selectTags)="updateSelectedTags($event)"
+    ></app-top-tags>
+  </aside>
+</div>

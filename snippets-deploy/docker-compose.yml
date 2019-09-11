@@ -36,11 +36,7 @@ services:
       - snippets_db_data:/var/lib/postgresql/data/
       - ../db/scripts/init-user-db.sh:/docker-entrypoint-initdb.d/init-user-db.sh
       - ../db/scripts:/scripts:cached
-    environment:
-      - POSTGRES_PASSWORD=${POSTGRES_PW}
-      - API_DB_NAME=${API_DB_NAME}
-      - API_DB_USER=${API_DB_USER}
-      - API_DB_PW=${API_DB_PASSWORD}
+    env_file: prod.env
 
   snippets-api:
     restart: always
@@ -49,16 +45,11 @@ services:
     build: ../snippets-api
     volumes:
       - api_static_files:/code/static
+    env_file: prod.env
     environment:
       - VIRTUAL_HOST=snippets-api.dobossy.net
       - SSL_POLICY=AWS-TLS-1-1-2017-01
       - LETSENCRYPT_HOST=snippets-api.dobossy.net
-      - DJANGO_SECRET_KEY=${DJANGO_SECRET_KEY}
-      - DJANGO_CONFIGURATION=Local
-      - DJANGO_DB=${API_DB_NAME}
-      - DJANGO_DB_USER=${API_DB_USER}
-      - DJANGO_DB_PASSWORD=${API_DB_PASSWORD}
-      - DJANGO_DB_URL=${API_DB_HOST}
 
   snippets-client:
     restart: always

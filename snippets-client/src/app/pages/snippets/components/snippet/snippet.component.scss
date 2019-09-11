@@ -1,0 +1,22 @@
+:host {
+  pre {
+    code {
+      font-size: 16px;
+      border-radius: 8px;
+      padding: 16px;
+    }
+  }
+  mat-card {
+    margin-top: 15px;
+    mat-card-footer {
+      text-align: right;
+      padding-right: 16px;
+    }
+  }
+  .edit-button {
+    margin-top: -10px;
+  }
+  .danger {
+    color: #aa0000;
+  }
+}
