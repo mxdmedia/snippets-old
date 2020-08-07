@@ -34,7 +34,7 @@
     "ngrx-store-freeze": "^0.2.4",
     "ngx-highlightjs": "^3.0.3",
     "ngx-infinite-scroll": "^8.0.0",
-    "prismjs": "^1.16.0",
+    "prismjs": "^1.21.0",
     "rxjs": "~6.5.3",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"
